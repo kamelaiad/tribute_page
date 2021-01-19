@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;1,700&family=Poppins:wght@300;400&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+
+body {
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    
+}
+
+
+.page_1 , .page_3 , .page_5 { 
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+div[class^="filter"] {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #AA0000;
+    opacity: .5;
+    position: absolute;
+    
+}
+
+
+
+
+
+/*PAGE_1*/
+
+
+.page_1 {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://dl.dropboxusercontent.com/s/bf11l5atewsdi3m/het.jpg?dl=0);
+    background-position: center 0;
+    
+}
+
+.page_1 .text{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.page_1 .text #title{
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    font-family: 'Lobster Two', cursive;
+    font-size: 3.5em;
+    font-weight: bold;
+    margin-bottom: 50px;
+    padding: 0px 30px;
+    
+}
+
+.page_1 .text .discription {
+    width: 90%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: rgba(243, 146, 0, .7);
+    
+}
+
+
+.page_1 .text .discription p{
+    text-align: center;
+    font-size: 1.75em;
+    font-weight: lighter;   
+    
+}
+
+p::before , p::after {
+    color: white;
+    display: inline-block;
+    position: relative;
+    
+}
+
+.page_1 .text .discription p::before {
+    content: open-quote;
+    right: 2px;
+}
+
+.page_1 .text .discription p::after {
+    content: close-quote;
+    right: -2px;
+    
+}
+
+.page_1 .image {
+    display: none;
+    
+}
+
+
+@media only screen and (min-width: 768px) {
+    .page_1 .text #title{
+        margin-bottom: 0px;
+        padding: 0px;
+    }
+    .page_1 .text .discription p::before {
+        content: open-quote;
+        right: 6px;
+    }
+    
+    .page_1 .text .discription p::after {
+        content: close-quote;
+        right: -6px;
+    }
+}
+
+
+/*PAGE_2*/
+
+.page_2 {
+    min-height: 300vh;
+    width: 100%;
+    background-color: #ffffff;
+    
+}
+
+
+/*TITLE*/
+
+.page_2 .tribute_title {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: #F39200;
+    font-size: 1.2em;
+    
+}
+.page_2 .tribute_title h2 {
+    width: 80%;
+    color: white;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+.tribute-info {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tribute_content {
+    width: 80%;
+    max-width: 800px;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+    padding: 30px 0;
+}
+
+.tribute_content ul {
+    list-style: none;
+}
+
+.tribute_content ul li {
+    padding: 20px;
+    background-color: #F39200;
+    margin-bottom: 20px;
+    border-radius: 20px 0 20px 0; 
+    text-align: center;
+}
+.tribute_content ul li:last-child {
+    margin-bottom: 0;
+}
+
+.tribute_content ul li h4 {
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    
+}
+.tribute_content ul li p {
+    font-size: 1.1em;
+    font-weight: lighter;
+    margin-bottom: 10px;
+    
+}
+
+@media only screen and (min-width: 768px) {
+    .tribute_content::before {
+        content: '';
+        height: 100%;
+        width: 4px;
+        position: absolute;
+        background-color: #D00000;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .tribute_content ul li {
+        width: 50%;
+        margin-bottom: 60px;
+    }
+    .tribute_content ul li:nth-child(odd) {
+        float: left;
+        clear: right;
+        transform: translateX(-50px);
+    }
+    .tribute_content ul li:nth-child(even) {
+        float: right;
+        clear: left;
+        transform: translateX(50px);
+    }
+    
+    .tribute_content ul li::after {
+        content: '';
+        width: 20px;
+        height: 20px;
+        background-color: #D00000;
+        position: absolute;
+        border-radius: 50%;
+        box-shadow: 0 0 0 3px rgba(208, 0, 0 , .3);
+    }
+    .tribute_content ul li:hover::after {
+        content: '';
+        width: 20px;
+        height: 20px;
+        background-color: #F39200;
+        position: absolute;
+        border-radius: 50%;
+        box-shadow: 0 0 0 5px rgba(243, 146, 0,.3);
+    }
+    
+    .tribute_content ul li:nth-child(odd):after {
+        top: 0;
+        right: -50px;
+        transform: translate(50% , -50%);
+    }
+    .tribute_content ul li:nth-child(even):after {
+        top: 0;
+        left: -50px;
+        transform: translate(-50% , -50%);
+    }
+    
+}
+
+
+
+
+
+
+
+
+/*PAGE3*/ 
+
+.page_3 {
+    background-position: 90% 50%;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-image: url(https://dl.dropboxusercontent.com/s/hosbyp3xsmw4vts/Muhammad-Ali-during-match-1970-billboard-1548-compressed.jpg?dl=0)
+    
+    
+}
+
+.page_3 .quote {
+    width: 80%;
+    z-index: 1;
+    text-align: center;
+}
+
+.page_3 .quote .say {
+    color: white;
+    font-family: 'Lobster Two', cursive;
+    font-size: 3em;
+}
+.page_3 .quote .Name {
+    color: #F39200;
+    font-family: 'Lobster Two', cursive;
+    font-size: 3em;
+}
+
+
+
+
+/*PAGE4*/ 
+
+.page_4 {
+    min-height: 300vh;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    background-color: #F39200;
+    flex-direction: column;
+    
+}
+
+.page_4 .tribute_content ul li {
+    padding: 20px;
+    background-color: #D00000;
+    margin-bottom: 20px;
+    border-radius: 20px 0 20px 0; 
+    text-align: center;
+}
+
+@media only screen and (min-width: 768px) { 
+    .tribute_content ul li:hover::after {
+        content: '';
+        width: 20px;
+        height: 20px;
+        background-color: #AA0000;
+        position: absolute;
+        border-radius: 50%;
+        box-shadow: 0 0 0 5px rgba(170, 0, 0,.3);
+    }
+}
+
+/*PAGE5*/
+
+.page_5 {
+    background-position: 40% 25%;
+    background-size: 360%;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-image: url(https://dl.dropboxusercontent.com/s/h3n162reox952sf/voc-ali-image.jpg?dl=0)
+    
+    
+}
+
+.page_5 .quote {
+    width: 80%;
+    z-index: 1;
+    text-align: center;
+}
+
+.page_5 .quote .say {
+    color: white;
+    font-family: 'Lobster Two', cursive;
+    font-size: 3em;
+}
+.page_5 .quote .Name {
+    color: #D00000;
+    font-family: 'Lobster Two', cursive;
+    font-size: 3em;
+}
+
+
+/*PAGE6*/
+
+.page_6 {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F39200;
+    font-family: 'Lobster Two', cursive;
+}
+
+.page_6 h1 {
+    text-align: center;
+    font-size: 2.5em;
+    width: 70%;
+}
+.page_6 h1 a {
+    transition: all 3s;
+    text-decoration: none;
+    color: white;
+}
+.page_6 h1 a:hover {
+    text-decoration: underline;
+    color: #AA0000;
+}
+
+
+
